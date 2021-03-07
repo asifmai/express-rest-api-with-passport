@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "ship": "git add .&&git commit -m 'update'&&git push"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",

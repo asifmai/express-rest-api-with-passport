@@ -21,16 +21,16 @@ app.use(express.json({ extended: true, limit: '200mb' }));
 app.use(cors());
 
 // Define Routes
-app.get('/', (req, res) => res.status(200).send('API Running'));
-app.use('/api', require('./routes/api'));
+app.get('/', (req, res) => res.status(200).send('Server Running'));
+app.use('/api/v1', require('./routes/api'));
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

@@ -1,6 +1,6 @@
 module.exports = {
-  "extends": "google",
-  "rules": {
+  extends: 'google',
+  rules: {
     // Additional, per-project rules...
-  }
-}
+  },
+};
